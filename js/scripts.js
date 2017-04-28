@@ -1,23 +1,34 @@
 //BACK-END LOGIC
-// show three suggestions
-// don't have to use a lot of logic
-// can even ignore user input
+// QUESTION WEIGHTS
+// Q1: // 1 = C#, java,// 2 = c#// 3 = ruby, php, java, css// 4 = java/android
+// Q2: // 1 = ruby, css ;  2 = php, css  ;  3 = c#
+// Q3 = 1 = css, php, ruby ; 2 = css, php, ruby  ; 3 = c#
+// Q4 = 1,2  = same as large company things ; 3,4: same as small comp things
+// Q5 = 1&2 =C3, java, php, css ; ; 3=ruby,php,javadroid,css ; 4 = all
 
-var calculateSuggestions = function(question1Input, question2Input, question3Input, question4Input, question5Input){
+var calculateSuggestions = function(question1Input, question2Input, question3Input, question4Input, question5Input) {
+  var scoreCSharp = scoreJavaDroid = scoreRuby = scoreCSS = scorePHP = 0;
+    if (question1Input === "1") {
+      scoreCSharp++; scoreJavaDroid++; }
+    if (question1Input === "2") {
+      scoreCSharp++; }
+    if (question1Input === "3") {
+      scoreCSharp++; }
+    if (question1Input === "4") {
+      scoreCSharp++; }
+    if (question1Input === "5") {
+      scoreCSharp++; }
 
 
-  console.log(question1Input);
+}
 
-if (question1Input === true) { return question1Input; }
-};
-
-
-var response = "Your suggested course tracks are: ";
-// suggestion1
-// suggestion2
-// suggestion3
-
-
+// RUBY/RAILS
+// startup small companies only; front end  ;  // website interactive
+// PHP/DRUPAL // content mgmt - front end sounds like
+// no interaction website  ;  // large and small companies
+// JAVA/ANDROID  // mobile  // front end and back end  // large and small companies
+// CSS/DESIGN  // meh.  designey stuff  // idk.  .large and small
+// C#/.NET - // large compnesi  // back end stuff
 
 //FRONT-END LOGIC
 $(document).ready(function() {

@@ -6,8 +6,9 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Epicodus Course Track Survey</title>
+    <title>Epicodus Course Determinator</title>
   </head>
+
   <body>
     <div class="container">
       <div class="well">
@@ -19,43 +20,59 @@
           </label>
           <input id ="name" class="form-control" type="text">
         </div>
-        <div class="form-group">What size company do you see yourself working at?
-            <select class="form-control" id="question1">
-              <option value="1">Giant, established corporation</option>
-              <option value="2">Mid-size business</option>
-              <option value="3">Small startup</option>
-              <option value="4">Working on my own / contract work</option>
-            </select>
+
+        <div class="form-group">
+          Would you rather build:
+          <select class="form-control" id="question1">
+            <option value="1">back-end systems</option>
+            <option value="2">database applications</option>
+            <option value="3">websites of any kind</option>
+            <option value="4">mobile apps</option>
+          </select>
         </div>
+
+        <div class="form-group">
+          If you focus on building websites, would you prefer:
+          <select class="form-control" id="question2">
+            <option value="1">websites with user-supplied content</option>
+            <option value="2">websites without much user interaction</option>
+            <option value="3">I disprefer building websites</option>
+          </select>
+        </div>
+
+
+
+        <div class="form-group">
+          What do you find most annoying about a website:
+          <select class="form-control" id="question3">
+            <option value="1">when I can't find what a particular button does</option>
+            <option value="2">when it's badly designed or ugly</option>
+            <option value="3">when it doesn't work, regardless of its appearance</option>
+            <option value="4"></option>
+          </select>
+        </div>
+
+
         <div class="form-group">
           Select what is most important to you in a workplace:
-          <select class="form-control" id="question2">
+          <select class="form-control" id="question4">
             <option value="1">Consistency and dependability</option>
             <option value="2">Predictable work environment</option>
             <option value="3">Change and flexibility</option>
             <option value="4">A beer keg</option>
           </select>
         </div>
-        <div class="form-group">
-          <label for="question3">do you prefer building content management
-            systems
-            with little user
-            interaction, or  websites with dynamic input from users?
-          </label>
-          <input id ="question3" class="form-control" type="text">
+
+        <div class="form-group">What size company do you see yourself at?
+            <select class="form-control" id="question5">
+              <option value="1">Giant, established corporation</option>
+              <option value="2">Mid-size business</option>
+              <option value="3">Small startup</option>
+              <option value="4">Working on my own / contract work</option>
+            </select>
         </div>
-        <div class="form-group">
-          <label for="question4">What is most important to you in a workplace?
-          </label>
-          <input id ="question4" class="form-control" type="text">
-        </div>
-        <div class="form-group">
-          <label for="question5">Do you prefer to study a language that
-            ahs been aroudn for a long time, or one that came into
-            being relatively recently?
-          </label>
-          <input id ="question5" class="form-control" type="text">
-        </div>
+
+
         <button type="submit" class="btn">Get course suggestions
         </button>
       </form>
