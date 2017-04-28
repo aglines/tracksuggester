@@ -8,7 +8,6 @@
     <script src="js/scripts.js"></script>
     <title>Epicodus Track Suggestion Determinator</title>
   </head>
-
   <body>
     <div class="container">
       <div class="well">
@@ -16,10 +15,10 @@
         <p>Respond to the following questions in order to receive
         a custom suggestion for which course track at Epicodus
         would suit your career goals.</p>
-
-<ul>
+      <ul>
       <form id="survey">
-<li>        <div class="form-group">
+        <li>
+          <div class="form-group">
           Would you rather build:
           <select class="form-control" id="question1">
             <option value="1">back-end systems</option>
@@ -27,18 +26,19 @@
             <option value="3">websites of any kind</option>
             <option value="4">mobile apps</option>
           </select>
-        </div>
-</li>
-<li>        <div class="form-group">
+          </div>
+        </li>
+        <li>
+          <div class="form-group">
           If you focus on building websites, would you prefer:
           <select class="form-control" id="question2">
             <option value="1">websites with user-supplied content</option>
             <option value="2">websites without much user interaction</option>
             <option value="3">I disprefer building websites</option>
           </select>
-        </div>
-</li>
-<li>        <div class="form-group">
+          </div>
+        </li>
+        <li>        <div class="form-group">
           What do you find most annoying about a website:
           <select class="form-control" id="question3">
             <option value="1">when I can't find what a particular button does</option>
@@ -47,8 +47,8 @@
             <option value="4"></option>
           </select>
         </div>
-</li>
-<li>        <div class="form-group">
+        </li>
+        <li>        <div class="form-group">
           Select what is most important to you in a workplace:
           <select class="form-control" id="question4">
             <option value="1">Consistency and dependability</option>
@@ -57,34 +57,31 @@
             <option value="4">A beer keg</option>
           </select>
         </div>
-</li>
-<li>        <div class="form-group">What size company do you see yourself at?
+        </li>
+        <li>
+          <div class="form-group">What size company do you see yourself at?
             <select class="form-control" id="question5">
               <option value="1">Giant, established corporation</option>
               <option value="2">Mid-size business</option>
               <option value="3">Small startup</option>
               <option value="4">Working on my own / contract work</option>
             </select>
-        </div>
-</li>
-        <button type="submit" class="btn">Click to tabulate results
-        </button>
+          </div>
+        </li>
+      </ul>
+      <button type="submit" class="btn">Click to tabulate results
+      </button>
       </form>
-    </div><!--WELL-->
-
-    <div class="results-hidden">
-      <p> Once tabulated, <span class="clickArea">click to see your suggested course</span>
-      </p>
-    </div>
-    <div class="results-showing">
-      <p> Click to <span class="clickArea">hide the suggestion again</p>
-
-      <div id="output">
+      </div><!--WELL-->
+      <div class="results-hidden">
+        <p> Once tabulated, <span class="clickArea">click to see your suggested course</span>
+        </p>
       </div>
-
-      <img src="img/IconCSharp.png" alt="C Sharp icon">
-    </div>
-</div><!--CONTAINER-->
-
+      <div class="results-showing">
+        <p> Click to <span class="clickArea">hide the suggestion again</p>
+        <div id="output">
+        </div>
+      </div>
+    </div><!--CONTAINER-->
   </body>
 </html>

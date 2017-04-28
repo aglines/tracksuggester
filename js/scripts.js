@@ -24,13 +24,16 @@ var calculateSuggestions = function(question1Input, question2Input, question3Inp
     if (question5Input === "4") {       scoreRuby++; scorePHP++; scoreCSS++; scoreJavaDroid++; scoreCSharp++;}
 
 
-//This is semi-faulty logic, but instructions say simple logic is OK
+//This is pretty faulty logic, but instructions say simple logic is OK
     if ( scoreCSharp === Math.max(scoreCSharp, scoreRuby, scoreJavaDroid, scoreCSS, scorePHP) ) {
         bestChoice = "C Sharp" }
-    // if ( scoreCSharp === Math.min(scoreCSharp, scoreRuby, scoreJavaDroid, scoreCSS, scorePHP) ) {
-    //     worstChoice = "C Sharp" }
-    // console.log(worstChoice);
-    console.log(bestChoice);
+    else if ( scoreCSS === Math.max(scoreCSharp, scoreRuby, scoreJavaDroid, scoreCSS, scorePHP) ) {
+            bestChoice = "CSS" }
+    else if ( scorePHP === Math.max(scoreCSharp, scoreRuby, scoreJavaDroid, scoreCSS, scorePHP) ) {
+            bestChoice = "PHP" }
+    else if ( scoreRuby === Math.max(scoreCSharp, scoreRuby, scoreJavaDroid, scoreCSS, scorePHP) ) {
+            bestChoice = "Ruby" }
+    else { bestChoice = "Java" }
   return bestChoice;
 };
 
@@ -47,10 +50,9 @@ $(document).ready(function() {
     var question5Input = $("#question5").val();
 
     var response = calculateSuggestions(question1Input, question2Input, question3Input, question4Input, question5Input);
-    // $("#output").text(response);
-
+    var finalizedResponse = "Based on your choices, it is likely you should consider Epicodus's " + response + " track."
     $("p").click(function(){
-      $("#output").text(response);
+      $("#output").text(finalizedResponse);
       $(".results-showing").toggle();
       $(".results-hidden").toggle();
     });
