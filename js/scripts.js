@@ -25,15 +25,16 @@ var calculateSuggestions = function(question1Input, question2Input, question3Inp
 
 
 //This is pretty faulty logic, but instructions say simple logic is OK
-    if ( scoreCSharp === Math.max(scoreCSharp, scoreRuby, scoreJavaDroid, scoreCSS, scorePHP) ) {
-        bestChoice = "C Sharp" }
-    else if ( scoreCSS === Math.max(scoreCSharp, scoreRuby, scoreJavaDroid, scoreCSS, scorePHP) ) {
-            bestChoice = "CSS" }
-    else if ( scorePHP === Math.max(scoreCSharp, scoreRuby, scoreJavaDroid, scoreCSS, scorePHP) ) {
-            bestChoice = "PHP" }
-    else if ( scoreRuby === Math.max(scoreCSharp, scoreRuby, scoreJavaDroid, scoreCSS, scorePHP) ) {
-            bestChoice = "Ruby" }
-    else { bestChoice = "Java" }
+//Determine bestChoice, a group of 4 tracks
+    if ( scoreCSharp === Math.min(scoreCSharp, scoreRuby, scoreJavaDroid, scoreCSS, scorePHP) ) {
+        bestChoice = "Ruby, Java, CSS, or PHP." }
+    else if ( scoreCSS === Math.min(scoreCSharp, scoreRuby, scoreJavaDroid, scoreCSS, scorePHP) ) {
+            bestChoice = "Ruby, Java, C#, or PHP." }
+    else if ( scorePHP === Math.min(scoreCSharp, scoreRuby, scoreJavaDroid, scoreCSS, scorePHP) ) {
+            bestChoice = "Ruby, Java, CSS, or C#." }
+    else if ( scoreRuby === Math.min(scoreCSharp, scoreRuby, scoreJavaDroid, scoreCSS, scorePHP) ) {
+            bestChoice = "C#, Java, CSS, or PHP." }
+    else { bestChoice = "C#, Ruby, CSS, or PHP." }
   return bestChoice;
 };
 
@@ -50,7 +51,8 @@ $(document).ready(function() {
     var question5Input = $("#question5").val();
 
     var response = calculateSuggestions(question1Input, question2Input, question3Input, question4Input, question5Input);
-    var finalizedResponse = "Based on your choices, it is likely you should consider Epicodus's " + response + " track."
+    console.log(response);
+    var finalizedResponse = "Based on your choices, you should consider Epicodus's tracks in " + response ;
     $("p").click(function(){
       $("#output").text(finalizedResponse);
       $(".results-showing").toggle();
