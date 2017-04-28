@@ -11,37 +11,44 @@
   <body>
     <div class="container">
       <div class="well">
-        Intro text for survey
+        Which courses should I consider at Epicodus?
       </div>
-
       <form id="survey">
         <div class="form-group">
-          <label for="question1">Do you prefer working in bigger, established
-            businesses, or in a smaller startup atmosphere?
+          <label for="name">Please enter your name:
           </label>
-          <input id ="question1" class="form-control" type="text">
+          <input id ="name" class="form-control" type="text">
         </div>
-
-        <div class="form-group">
-          <label for="question2">Back-end internal software,
-          or on front end sites and mobile apps?
-          </label>
-          <input id ="question2" class="form-control" type="text">
+        <div class="form-group">What size company do you see yourself working at?
+            <select class="form-control" id="question1">
+              <option value="1">Giant, established corporation</option>
+              <option value="2">Mid-size business</option>
+              <option value="3">Small startup</option>
+              <option value="4">Working on my own / contract work</option>
+            </select>
         </div>
-
         <div class="form-group">
-          <label for="question3">do you prefer building content management systems with little user
+          Select what is most important to you in a workplace:
+          <select class="form-control" id="question2">
+            <option value="1">Consistency and dependability</option>
+            <option value="2">Predictable work environment</option>
+            <option value="3">Change and flexibility</option>
+            <option value="4">A beer keg</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="question3">do you prefer building content management
+            systems
+            with little user
             interaction, or  websites with dynamic input from users?
           </label>
           <input id ="question3" class="form-control" type="text">
         </div>
-
         <div class="form-group">
-          <label for="question4">
+          <label for="question4">What is most important to you in a workplace?
           </label>
           <input id ="question4" class="form-control" type="text">
         </div>
-
         <div class="form-group">
           <label for="question5">Do you prefer to study a language that
             ahs been aroudn for a long time, or one that came into
@@ -49,15 +56,11 @@
           </label>
           <input id ="question5" class="form-control" type="text">
         </div>
-
-
-        <button type="submit" class="btn">Find out what track is best for you
+        <button type="submit" class="btn">Get course suggestions
         </button>
       </form>
     </div><!--CONTAINER-->
     <div id="output">
     </div>
-
-
   </body>
 </html>

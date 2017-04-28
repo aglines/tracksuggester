@@ -16,4 +16,4 @@ https://aglines./github.io/(TBD)
 
 ## License
 
-MIT license
+MIT license (c) 2017 Andrew Glines and Epicodus
