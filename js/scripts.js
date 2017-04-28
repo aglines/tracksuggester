@@ -2,7 +2,7 @@
 
 var calculateSuggestions = function(question1Input, question2Input, question3Input, question4Input, question5Input) {
   var scoreCSharp = scoreJavaDroid = scoreRuby = scoreCSS = scorePHP = 0;
-
+  var bestChoice = "";
   //Calculate a score for each course
     if (question1Input === "1") {       scoreCSharp++; scoreJavaDroid++; }
     if (question1Input === "2") {       scoreCSharp++; }
@@ -25,13 +25,12 @@ var calculateSuggestions = function(question1Input, question2Input, question3Inp
 
 
 //This is semi-faulty logic, but instructions say simple logic is OK
-    if ( scoreCSharp = Math.max(scoreCSharp, scoreRuby, scoreJavaDroid, scoreCSS, scorePHP) {
+    if ( scoreCSharp === Math.max(scoreCSharp, scoreRuby, scoreJavaDroid, scoreCSS, scorePHP) ) {
         bestChoice = "C Sharp" }
-
-
-
-    console.log(worstChoice);
-
+    // if ( scoreCSharp === Math.min(scoreCSharp, scoreRuby, scoreJavaDroid, scoreCSS, scorePHP) ) {
+    //     worstChoice = "C Sharp" }
+    // console.log(worstChoice);
+    console.log(bestChoice);
   return bestChoice;
 };
 
