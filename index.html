@@ -2,26 +2,27 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Epicodus Course Determinator</title>
+    <title>Epicodus Track Suggestion Determinator</title>
   </head>
 
   <body>
     <div class="container">
       <div class="well">
-        Which courses should I consider at Epicodus?
-      </div>
+        <h2>Which courses should I consider at Epicodus?</h2>
+
+<ul>
       <form id="survey">
-        <div class="form-group">
+<li>        <div class="form-group">
           <label for="name">Please enter your name:
           </label>
           <input id ="name" class="form-control" type="text">
         </div>
-
-        <div class="form-group">
+</li>
+<li>        <div class="form-group">
           Would you rather build:
           <select class="form-control" id="question1">
             <option value="1">back-end systems</option>
@@ -30,8 +31,8 @@
             <option value="4">mobile apps</option>
           </select>
         </div>
-
-        <div class="form-group">
+</li>
+<li>        <div class="form-group">
           If you focus on building websites, would you prefer:
           <select class="form-control" id="question2">
             <option value="1">websites with user-supplied content</option>
@@ -39,8 +40,8 @@
             <option value="3">I disprefer building websites</option>
           </select>
         </div>
-
-        <div class="form-group">
+</li>
+<li>        <div class="form-group">
           What do you find most annoying about a website:
           <select class="form-control" id="question3">
             <option value="1">when I can't find what a particular button does</option>
@@ -49,8 +50,8 @@
             <option value="4"></option>
           </select>
         </div>
-
-        <div class="form-group">
+</li>
+<li>        <div class="form-group">
           Select what is most important to you in a workplace:
           <select class="form-control" id="question4">
             <option value="1">Consistency and dependability</option>
@@ -59,8 +60,8 @@
             <option value="4">A beer keg</option>
           </select>
         </div>
-
-        <div class="form-group">What size company do you see yourself at?
+</li>
+<li>        <div class="form-group">What size company do you see yourself at?
             <select class="form-control" id="question5">
               <option value="1">Giant, established corporation</option>
               <option value="2">Mid-size business</option>
@@ -68,23 +69,25 @@
               <option value="4">Working on my own / contract work</option>
             </select>
         </div>
-
+</li>
         <button type="submit" class="btn">Click to tabulate results
         </button>
       </form>
-    </div><!--CONTAINER-->
-    <div id="output">
-    </div>
+    </div><!--WELL-->
 
     <div class="results-hidden">
-      <p> Once tabulated, click here to see an icon of your suggested course</p>
+      <p> Once tabulated, <span class="clickArea">click to see your suggested course</span>
+      </p>
     </div>
-
     <div class="results-showing">
-      <p> Click here to hide the suggestion again</p>
+      <p> Click to <span class="clickArea">hide the suggestion again</p>
+
+      <div id="output">
+      </div>
+
       <img src="img/IconCSharp.png" alt="C Sharp icon">
     </div>
-
+</div><!--CONTAINER-->
 
   </body>
 </html>

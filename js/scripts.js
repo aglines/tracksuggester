@@ -45,12 +45,12 @@ $(document).ready(function() {
     var question5Input = $("#question5").val();
 
     var response = calculateSuggestions(question1Input, question2Input, question3Input, question4Input, question5Input);
-    $("#output").text(response);
-
+    // $("#output").text(response);
 
     $("p").click(function(){
-      $(".results-showing").fadeToggle();
-      $(".results-hidden").hide();
+      $("#output").text(response);
+      $(".results-showing").toggle();
+      $(".results-hidden").toggle();
     });
   });
 });
