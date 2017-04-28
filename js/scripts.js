@@ -28,12 +28,20 @@ var calculateSuggestions = function(question1Input, question2Input, question3Inp
     if (question5Input === "3") {       scoreRuby++; scorePHP++; scoreCSS++; scoreJavaDroid++; }
     if (question5Input === "4") {       scoreRuby++; scorePHP++; scoreCSS++; scoreJavaDroid++; scoreCSharp++;}
 
-console.log(scoreCSS, scorePHP, scoreRuby, scoreCSharp, scoreJavaDroid);
+    console.log(scoreCSS, scorePHP, scoreRuby, scoreCSharp, scoreJavaDroid);
+
 // tabulate scores, which are highest 3? Find lowest, exclude taht one
+// tabulate which is lowest score; return values of high 3 scores
 
-return
 
-}
+
+    bestChoice = Math.max(scoreCSS, scoreCSharp, scoreRuby, scoreJavaDroid, scorePHP);
+    // console.log(nameof(scoreCSS));
+    worstChoice = Math.min(scoreCSS, scoreCSharp, scoreRuby, scoreJavaDroid, scorePHP);
+    console.log(bestChoice, worstChoice);
+
+  return bestChoice;
+};
 
 // RUBY/RAILS
 // startup small companies only; front end  ;  // website interactive

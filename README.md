@@ -1,18 +1,18 @@
-# Author and Contributors
+# Author
 
 Andrew Glines
 
-# Epicodus Course Survey
+# Program
+
+Epicodus Course Survey
+
+## Description
 
 A user-interactive survey to suggest which course track a prospective student should consider at Epicodus.
 
 ## Setup
 
 Clone site from Github and run HTML in a standard browser.
-
-## Link to site on GitHub pages
-
-https://aglines./github.io/(TBD)
 
 ## License
 
