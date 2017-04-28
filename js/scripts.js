@@ -3,6 +3,7 @@
 var calculateSuggestions = function(question1Input, question2Input, question3Input, question4Input, question5Input) {
   var scoreCSharp = scoreJavaDroid = scoreRuby = scoreCSS = scorePHP = 0;
 
+  //Calculate a score for each course
     if (question1Input === "1") {       scoreCSharp++; scoreJavaDroid++; }
     if (question1Input === "2") {       scoreCSharp++; }
     if (question1Input === "3") {       scoreRuby++; scorePHP++; scoreJavaDroid++; scoreCSS++;}
@@ -22,12 +23,14 @@ var calculateSuggestions = function(question1Input, question2Input, question3Inp
     if (question5Input === "3") {       scoreRuby++; scorePHP++; scoreCSS++; scoreJavaDroid++; }
     if (question5Input === "4") {       scoreRuby++; scorePHP++; scoreCSS++; scoreJavaDroid++; scoreCSharp++;}
 
-    // console.log(scoreCSS, scorePHP, scoreRuby, scoreCSharp, scoreJavaDroid);
 
-    bestChoice = Math.max(scoreCSS, scoreCSharp, scoreRuby, scoreJavaDroid, scorePHP);
-    // console.log(nameof(scoreCSS));
-    worstChoice = Math.min(scoreCSS, scoreCSharp, scoreRuby, scoreJavaDroid, scorePHP);
-    // console.log(bestChoice, worstChoice);
+//This is semi-faulty logic, but instructions say simple logic is OK
+    if ( scoreCSharp = Math.max(scoreCSharp, scoreRuby, scoreJavaDroid, scoreCSS, scorePHP) {
+        bestChoice = "C Sharp" }
+
+
+
+    console.log(worstChoice);
 
   return bestChoice;
 };
